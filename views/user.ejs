@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/" style="text-decoration: none;"><h1>All users</h1></a>
+    <ul>
+        <% for(let user of allUsers) { %>
+        <li><%= user.username %> - <%= user.password %>
+            <a href="/change/<%= user._id %>">  Update  </a>
+            <a href="/delete/<%= user._id %>">  Delete  </a>
+        </li>
+        <% } %>
+    </ul>
+    <h3>
+        <a href="/allusers">Add a New User</a>
+        <a href="/findUser">Find a User</a>
+    </h3>
+</body>
+
+</html>

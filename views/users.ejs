@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>All users</h1>
+    <h3>
+        <a href="/sortasc" style="text-decoration:none;">Sort by username asc </a>
+        <a href="/sortdesc" style="text-decoration:none;">&nbsp&nbsp&nbsp&nbsp&nbspSort by username desc</a>
+    </h3>
+    <ul>
+        <% for(let user of allUsers) { %>
+        <li><%= user.username %> - <%= user.password %>
+            <a href="/change/<%= user._id %>">  Update  </a>
+            <a href="/delete/<%= user._id %>">  Delete  </a>
+        </li>
+        <% } %>
+    </ul>
+    <h3>
+        <a href="/allusers" style="text-decoration:none;">Add a New User</a>
+        <a href="/findUser" style="text-decoration:none;">&nbsp&nbsp&nbsp&nbsp&nbspFind a User</a>
+    </h3>
+</body>
+
+</html>
