@@ -25,7 +25,7 @@ mongoose.connect(
     "mongodb+srv://royal:bargav@sr-bro.9cvluiq.mongodb.net/?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }b hu n
+    }
 ).then(() => {
     const port = 3015;
     app.listen(port, () => {
